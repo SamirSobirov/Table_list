@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+form{
+    height: 40px;
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+label{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label span{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+input{
+    width: 250px;
+    height: 40px;
+    outline: none;
+    border: solid 1px #c4c4c4;
+    border-radius: 4px;
+    padding: 8px 10px;
+    transition: .2s ease;
+}
+
+button{
+    all: unset;
+    width: 100px;
+    height: 100%;
+    background-color: #004DFF;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .2s ease;
+}
+
+button:hover{
+    scale: 1.05;
+    background-color: #0040d6;
+}
+
+table{
+    display: table;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border-color: gray;
+    margin: 50px auto;
+    width: 100%;
+    max-height: 400px;
+    overflow: scroll;
+}
+
+table tr th{
+    color: gray;
+}
+
+table tr td, th{
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #c4c4c4;
+}
+
+table span{
+    transition: .2s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+table span:hover{
+    color: red;
+}
+
+.empty_input{
+    border-color: red;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease;
+}
+
+.modal_area{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal_cont{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transform: perspective(600px) rotateX(90deg);
+    opacity: 0;
+    visibility: hidden;
+    top: -100%;
+    transition: all 1s ease;
+}
+
+.modal_close.btn{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-weight: 600;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+    transition: .2s ease;
+}
+.modal_close.btn:hover{
+    color: red;
+}
+
+.modal_act{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal_act .modal_cont{
+    opacity: 1;
+    visibility: visible;
+    transform: perspective(600px) rotateX(0deg);
+    top: 50%;
+}
+
+.modal_content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.modal_content .curr{
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+}
+
+
+.modal_content .change{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+.modal_content .change .next {
+    width: 100%;
+    height: 40px;
+}
+
+.modal_content .change button{
+    all: unset;
+    font-weight: 600;
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 8px;
+    transition: .3s ease;
+}
+
+.modal_content .change button:hover{
+    scale: 1.05;
+    background-color: rgb(39, 93, 254);
+}
+
+.editBtn{
+    width: 60px;
+    height: 30px;
+    background-color: royalblue;
+    color: white;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+}
+
+.editBtn:hover{
+    scale: 1.1;
+    background-color: rgb(39, 93, 254);
+    box-shadow: 0 0 3px rgb(39, 93, 254);
+}
+
+.previous_view{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

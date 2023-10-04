@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Table list</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Adding, changing, and deleting an element from a table</h1>
+            <form action="#" name="main">
+                <label>
+                    <span>Name</span>
+                    <input placeholder="Name" name="name" type="text">
+                </label>
+                <label>
+                    <span>Age</span>
+                    <input placeholder="Age" name="age" type="number">
+                </label>
+                <button>Add</button>
+            </form>
+        </header>
+        <main>
+            <table></table>
+        </main>
+    </div>
+
+    <div class="modal">
+        <div class="modal_close modal_area"></div>
+        <div class="modal_cont">
+            <div class="modal_close btn">X</div>
+            <div class="modal_content">
+                <div class="previous_view">
+                    <div class="curr name"></div>
+                    <div class="curr age"></div>
+                </div>
+                <label class="change">
+                    <p>Change to:</p>
+                    <input id="name" type="text" placeholder="name">
+                    <input id="age" type="text" placeholder="age">
+                    <button>Change</button>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
